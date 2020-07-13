@@ -1,15 +1,11 @@
 import numpy as np
 
 
-def f(x, i):
-    # комментарии надо оставлять
-    mean = np.mean(x)
-    a = 0
-    for k in range(i):
-        a += x[k] - mean
-    return a
-
-
-
-
-
+class MF_DCCA(np.array):
+    def f(self, i):
+        # комментарии надо оставлять
+        mean = np.mean(self)
+        x = 0
+        for k in range(i):
+            x += self[k] - mean
+        return x
